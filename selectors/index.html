@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>jQuery Crash Course | Selectors</title>
 
@@ -18,9 +18,71 @@
 
 <div id="container">
 
+    <h1 id="heading1">Heading One</h1>
+    <p id="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut, cum error non officia quidem
+        vero voluptate. Accusamus animi <span>ipsum itaque labore maxime nulla optio pariatur praesentium</span> totam vel. Ipsa.</p>
+
+    <h1 class="heading2">Heading Two</h1>
+    <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut, cum error non officia quidem
+        vero voluptate. Accusamus animi <span>ipsum itaque labore maxime nulla optio pariatur praesentium</span> totam vel. Ipsa.</p>
+
+    <h1 class="heading3">Heading Three</h1>
+    <p class="para3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut, cum error non officia quidem
+        vero voluptate. Accusamus animi <span>ipsum itaque labore maxime nulla optio pariatur praesentium</span> totam vel. Ipsa.</p>
+
+    <ul id="list">
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+    </ul>
+
+    <input type="button" value="Button 1">
+    <input type="submit" value="submit">
+    <input type="text">
+
+    <br/>
+
+    <a href="http://google.com">Google</a>
+    <a href="http://yahoo.com">Yahoo</a>
+    <a href="https://wwww.thandotec.co.za">ThandoTech</a>
+
 </div>
 
 <script>
+
+    $('#heading1').hide();
+    $('.heading2').hide();
+
+    $('p span').css('color', 'red');
+
+    $('ul#list li:first').css('color', 'red');
+    $('ul#list li:last').css('color', 'green');
+    $('ul#list li:even').css('background-color', 'grey');
+    $('ul#list li:odd').css('background-color', '#CCC');
+    $('ul#list li:nth-child(3n)').css('list-style', 'none');
+
+    // using type inputs
+    // $(':button').hide();
+    // $(':submit').hide();
+    // $(':text').hide();
+
+    // attributes as selectors
+    $('[href]').css('color', 'red');
+
+    $('a[href="http://yahoo.com"]').css('color', 'green');
+
+    // $('*').hide();
+
+
 
 </script>
 
