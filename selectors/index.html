@@ -24,6 +24,7 @@
 
     <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet cum cumque debitis, dicta dignissimos doloremque dolores ea eaque ipsum natus necessitatibus officia omnis porro possimus quisquam reiciendis rerum, voluptates.</p>
 
+    <h1 id="cords">Something useful</h1>
 </div>
 
 <script>
@@ -75,8 +76,43 @@
         $('#btn1').hover(function () {
             // $('para1').toggle();
         });
+
         $('#btn1').on('hover', function () {
-            $('.para1').toggle('.para1');
+            // $('.para1').toggle('.para1');
+        });
+
+        $('#btn1').on('mouseenter', function () {
+            $('.para1').toggle();
+        });
+
+        $('#btn1').on('mouseleave', function () {
+            $('.para1').toggle();
+        });
+
+        $('#btn1').on('mousemove', function () {
+            $('.para1').toggle();
+        });
+
+        $('#btn1').on('mousedown', function () {
+            $('.para1').toggle();
+        });
+
+        $('#btn1').on('mouseup', function () {
+            $('.para1').toggle();
+        });
+
+
+        $('#btn1').click(function (e) {
+            // alert('button clicked');
+            // alert(e.currentTarget.id);
+            // alert(e.currentTarget.innerHTML);
+            // alert(e.currentTarget.outerHTML);
+            // alert(e.currentTarget.className);
+        });
+
+
+        $('#btn1').on('mousemove', function (e) {
+            $('#cords').html('Cords: Y:' + e.clientY+' X: '+e.clientX);
         })
 
 
