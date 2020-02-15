@@ -28,17 +28,24 @@
 
     <hr>
 
-    <form action="">
+    <form id="form">
         <label>Name</label>
         <br>
         <input type="text" id="name" name="name">
         <br>
-        <label for="">Email</label>
+        <label>Email</label>
         <br>
         <input type="text" id="email" name="email">
         <br>
-
-
+        <label>Gender</label>
+        <br>
+        <select name="gender" id="gender">
+            <option value="select">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <br>
+        <input type="submit" value="submit">
     </form>
 
 </div>
@@ -73,28 +80,28 @@
 
     // use document.redy if you want to put jQuery in the head use $(document).ready()
     $(document).ready(function () {
-        // $('#btn1').click(function () {
-        //     alert('button clicked');
-        // });
+       /* $('#btn1').click(function () {
+            alert('button clicked');
+        });
 
         $('#btn1').on('click', function () {
-            // $('.para1').hide();
-            // $('.para1').toggle('.para1');
+            $('.para1').hide();
+            $('.para1').toggle('.para1');
         });
         $('#btn2').on('click', function () {
             $('.para1').show();
         });
 
         $('#btn1').dblclick(function () {
-            // $('.para1').toggle();
+            $('.para1').toggle();
         });
 
         $('#btn1').hover(function () {
-            // $('para1').toggle();
+            $('para1').toggle();
         });
 
         $('#btn1').on('hover', function () {
-            // $('.para1').toggle('.para1');
+            $('.para1').toggle('.para1');
         });
 
         $('#btn1').on('mouseenter', function () {
@@ -119,23 +126,46 @@
 
 
         $('#btn1').click(function (e) {
-            // alert('button clicked');
-            // alert(e.currentTarget.id);
-            // alert(e.currentTarget.innerHTML);
-            // alert(e.currentTarget.outerHTML);
-            // alert(e.currentTarget.className);
+            alert('button clicked');
+            alert(e.currentTarget.id);
+            alert(e.currentTarget.innerHTML);
+            alert(e.currentTarget.outerHTML);
+            alert(e.currentTarget.className);
         });
 
 
         $('#btn1').on('mousemove', function (e) {
             $('#cords').html('Cords: Y:' + e.clientY+' X: '+e.clientX);
-        })
+        });
 
+        // for input fields
 
+        $('input').focus(function () {
+            alert('focus');
+            $('input#name').css('background', 'pink');
+            $(this).css('background', 'pink')
+        });
+
+        $('input').blur(function () {
+            $(this).css('background', 'white');
+        });
+
+        $('input').keyup(function (evt) {
+            console.log(evt.target.value);
+        });
+        */
+
+       $('select#gender').change(function (e) {
+           alert(e.target.value);
+       });
+
+       $('#form').submit(function (e) {
+           e.preventDefault();
+
+           var name = $('input#name').val();
+           console.log(name);
+       })
     });
-
-
-
 
 </script>
 
